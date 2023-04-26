@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
     
@@ -24,10 +25,10 @@ function Header() {
             <div className='header-content'>
                 <a href="/"><h1>vAlorant Infos</h1></a>
                 <nav>
-                    <a href="/" className='nav-link nav-link-ltr'>Agents</a>
-                    <a href="/" className='nav-link nav-link-ltr'>Maps</a>
-                    <a href="/" className='nav-link nav-link-ltr'>Armes</a>
-                    <a href="/" className='nav-link nav-link-ltr'>Modes</a>
+                    <Link to="agents" className='nav-link nav-link-ltr'>Agents</Link>
+                    <Link to="" className='nav-link nav-link-ltr'>Maps</Link>
+                    <Link to="" className='nav-link nav-link-ltr'>Armes</Link>
+                    <Link to="" className='nav-link nav-link-ltr'>Modes</Link>
                 </nav>
             </div>
         </header>

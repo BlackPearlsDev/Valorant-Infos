@@ -27,7 +27,8 @@ function BackTop() {
     return (
         <>
             {showScrollButton && (
-                <a href='/#' className="back-to-top" onClick={handleScrollClick} style={{display: 'inline'}}>
+                // eslint-disable-next-line jsx-a11y/anchor-is-valid
+                <a href='#' className="back-to-top" onClick={handleScrollClick} style={{display: 'inline'}}>
                     <FontAwesomeIcon icon={faAngleUp} size="sm" />
                 </a>
             )}

@@ -9,3 +9,11 @@
 Projet en cours de développement.
 
 En ligne à cette adresse : https://blackpearlsdev.github.io/Valorant-Infos/
+
+
+## Prévisualisation
+
+⬇️ Page d'accueil ⬇️
+![Valorant Infos home page](https://gyazo.com/f04d9af4ff2b876ba9c2f32e56ff61dc.gif)
+
+⚠️Pas de responsive pour l'instant.

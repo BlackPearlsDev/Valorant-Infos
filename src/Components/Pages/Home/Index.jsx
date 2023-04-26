@@ -1,60 +1,24 @@
-import { useRef } from 'react';
-import valorantLogo from '../../../assets/img/valorant-logo.png';
 import CardFeatures from '../../UI/CardFeatures/Index';
 import { faUsers } from '@fortawesome/free-solid-svg-icons'
 import { faMapLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faGun } from '@fortawesome/free-solid-svg-icons'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons'
+import HeadSection from '../../UI/HeadSection/Index';
 import BackTop from '../../UI/BackTop/Index';
 
 function Home() {
-    const learnMoreRef = useRef(null);
-
-    const handleScrollClick = () => {
-        const offset = learnMoreRef.current.offsetTop - 100;
-        window.scrollTo({ top: offset, behavior: 'smooth' });
-    }
 
     return (
         <main>
-            <section className="head-section">
-                <article>
-                    <div>
-                        <h2>Bienvenue sur Valorant Infos</h2>
-                        <p>Valorant Infos est un site web qui vous permet de suivre vos statistiques sur Valorant.</p>
-                        <a href='/#learn' className='btn' onClick={handleScrollClick}>En savoir plus</a>
-                    </div>
+            <HeadSection title="Bienvenue sur Valorant Infos" para="Valorant Infos est un site web qui vous permet de suivre vos statistiques sur Valorant." btn="En savoir plus" anchor="#learn-more"/>
 
-                    <div>
-                        <img src={valorantLogo} alt="Valorant Infos" />
-                    </div>
-                </article>
-
-                <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-                    <defs>
-                        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
-                    </defs>
-                    <g class="wave1">
-                        <use href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)"></use>
-                    </g>
-                    <g class="wave2">
-                        <use href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)"></use>
-                    </g>
-                    <g class="wave3">
-                        <use href="#wave-path" x="50" y="9" fill="#ffeef2"></use>
-                    </g>
-                </svg>
-            </section>
-
-            <section className='learn-more'>
-                <div ref={learnMoreRef}></div>
+            <section className='learn-more' id="learn-more">
                 <article>
                     <h2>FEATURES</h2>
                     <div className='div-line'></div>
                     <p>Sur Valorant Infos vous retrouverez toutes les informations qu'il vous faut.</p>
                 </article>
 
-                {/* card here */}
                 <div className='card-pos'>
                     <CardFeatures title="Agents" para="Infos sur tous les agents" path="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174" icon={faUsers} color="#47aeff"/>
                     <CardFeatures title="Maps" para="Infos sur toutes les cartes" path="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762" icon={faMapLocationDot} color="#11dbcf"/>
