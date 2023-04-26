@@ -7,6 +7,7 @@ function Router() {
     return (
         <Routes>
             <Route index path="/" element={<Home />} />
+            <Route path="Valorant-Infos" element={<Home />} /> {/* For GitHub Pages */}
             <Route path="/agents" element={<Agents />} />
         </Routes>
     );
