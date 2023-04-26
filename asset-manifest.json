@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Valorant-Infos/static/css/main.9740676c.css",
-    "main.js": "/Valorant-Infos/static/js/main.e0871a5e.js",
+    "main.css": "/Valorant-Infos/static/css/main.1f331955.css",
+    "main.js": "/Valorant-Infos/static/js/main.5b2612ca.js",
     "static/media/hero-bg.jpg": "/Valorant-Infos/static/media/hero-bg.282ec3bcd8bdf36dd129.jpg",
     "static/media/valorant-logo.png": "/Valorant-Infos/static/media/valorant-logo.5613f3b8f7e594a6c636.png",
     "static/media/Valorant Font.ttf": "/Valorant-Infos/static/media/Valorant Font.86ec8370af32018a2391.ttf",
     "index.html": "/Valorant-Infos/index.html",
-    "main.9740676c.css.map": "/Valorant-Infos/static/css/main.9740676c.css.map",
-    "main.e0871a5e.js.map": "/Valorant-Infos/static/js/main.e0871a5e.js.map"
+    "main.1f331955.css.map": "/Valorant-Infos/static/css/main.1f331955.css.map",
+    "main.5b2612ca.js.map": "/Valorant-Infos/static/js/main.5b2612ca.js.map"
   },
   "entrypoints": [
-    "static/css/main.9740676c.css",
-    "static/js/main.e0871a5e.js"
+    "static/css/main.1f331955.css",
+    "static/js/main.5b2612ca.js"
   ]
 }
