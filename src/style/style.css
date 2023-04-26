@@ -215,13 +215,13 @@ svg {
 
 /* start learn more section */
 
-.learn-more, .agents-details {
+.learn-more, .agents-details, .maps-details, .weapons-details {
     background-color: #ffeff2;
     padding: 100px 0;
     overflow: hidden;
 }
 
-.learn-more article, .agents-details article {
+.learn-more article, .agents-details article, .maps-details article, .weapons-details article {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -230,22 +230,22 @@ svg {
     color: #444;
 }
 
-.learn-more article h2, .agents-details article h2 {
+.learn-more article h2, .agents-details article h2, .maps-details article h2, .weapons-details article h2 {
     font-size: 3.2rem;
 }
 
-.learn-more article p, .agents-details article p {
+.learn-more article p, .agents-details article p, .maps-details article p, .weapons-details article p {
     font-size: 1.8rem;
 }
 
-.learn-more article .div-line, .agents-details article .div-line {
+.div-line {
     width: 100px;
     height: 5px;
     background-color: #ff4656;
     margin: 15px;
 }
 
-.card-pos, .agents-pos {
+.card-pos, .agents-pos, .maps-pos, .weapons-pos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -438,6 +438,266 @@ svg {
     width: 100%;
 }
 /* end agent section */
+
+/* start maps section */
+.maps-pos {
+    width: 100%;
+}
+
+.maps-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.map-card {
+    background-color: #fff;
+    color: #fff;
+    padding: 22px;
+    margin: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 200px;
+    clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 20%);
+    position: relative;
+    transition: all ease-in-out 0.4s;
+}
+
+.map-card:hover {
+    transform: scale(1.05);
+}
+
+.map-card img {
+    transition: all ease-in-out 0.7s;
+}
+
+.map-card:hover.map-card img {
+    transform: scale(0.5);
+}
+
+.map-card h2 {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.map-card p {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+/* end maps section */
+
+/* start selected map section */
+.selected-map {
+    width: 100%;
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.callout {
+    position: absolute;
+    left: 3980.9062px;
+    top: -5938.758px;
+    background-color: red;
+}  
+/* end selected map section */
+
+/* start weapons section */
+.weapons-pos {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 22px;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.weapon-card {
+    background-color: rgba(40, 40, 86, 0.8);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    padding: 22px;
+    margin: 22px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.weapon-card button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.weapon-card img {
+    width: 100%;
+}
+
+.weapon-card:hover {
+    transform: scale(1.05);
+}
+/* end weapons section */
+
+/* start modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 22px;
+    clip-path: polygon(5% 0, 100% 0, 100% 90%, 95% 100%, 0 100%, 0 10%);
+}
+
+.modal-content h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.modal-content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 22px;
+}
+
+.modal-content button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4654;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.modal-content button:hover {
+    background-color: #fff;
+    color: #ff4654;
+    border: 1px solid #ff4654;
+}
+
+.modal-weapon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-weapon img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-weapon h2 {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.modal-weapon p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 22px;
+}
+
+.weapon-infos, .weapon-img-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weapon-img-price {
+    position: relative;
+}
+
+.weapon-img-price p {
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    margin: 0;
+}
+
+.skin-carrousel {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 42px 0;
+}
+
+.skin-carrousel img {
+    width: 100%;
+    margin: 16px 12px;
+}
+/* end modal */
 
 footer {
     color: #fff;
