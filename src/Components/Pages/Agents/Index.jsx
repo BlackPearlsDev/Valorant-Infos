@@ -84,7 +84,7 @@ function Agents() {
                                                     <div className='agent-ability' key={index}>
                                                         <div className='ability-img'>
                                                             <button onClick={(e) => handleShowSpell(e, ability)}>
-                                                                <img src={ability.displayIcon} alt={ability.displayName}/>
+                                                                {ability.displayIcon && <img src={ability.displayIcon} alt={ability.displayName}/>}
                                                             </button>
                                                         </div>
                                                         <div className={`ability-details ${selectedSpell === ability ? '' : 'hide-infos'}`}>
