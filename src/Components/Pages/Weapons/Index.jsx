@@ -3,12 +3,14 @@ import HeadSection from '../../UI/HeadSection/Index';
 import BackTop from '../../UI/BackTop/Index';
 import api from '../../../API/index';
 import Modal from '../../UI/Modal/Index';
+import { Carousel } from 'rsuite';
 
 function Weapons() {
 
     const [weapons, setWeapons] = useState([]);
     const [selectedWeapon, setSelectedWeapon] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
         api.get('/weapons', {
@@ -30,6 +32,8 @@ function Weapons() {
         e.preventDefault();
         setSelectedWeapon(weapon);
         setShowModal(true);
+        setActiveIndex(0);
+        console.log('skins length:', weapon.skins.length);
     }
 
     // console.log('selectedWeapon:', selectedWeapon);
@@ -37,7 +41,7 @@ function Weapons() {
     const handleCloseModal = () => {
         setShowModal(false);
     }
-
+    
     return (
         <main>
             <HeadSection title="Les armes" para="Les armes sont les outils indispensables pour gagner une partie." btn="Parcourir" anchor="#weapons-details" />
@@ -74,19 +78,15 @@ function Weapons() {
                                 </div>
                             </div>
 
-                            <div className='skin-carrousel'>
-                                <div className='skin-carrousel-img'>
-                                    <img src={selectedWeapon.displayIcon} alt={selectedWeapon.displayName} />
-
-                                    {selectedWeapon.skins.map((skin, index) => (
-                                        <div key={index}>
-                                            {skin.displayIcon && (
-                                                <img src={skin.displayIcon} alt={skin.displayName} />
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+                            <Carousel className="custom-slider" autoplay={false} onSelect={index => setActiveIndex(index)} activeIndex={activeIndex} shape='bar' placement='bottom'>
+                                {selectedWeapon.skins.map((skin, index) => (
+                                    <div key={index}>
+                                        {skin.displayIcon && (
+                                            <img src={skin.displayIcon} alt={skin.displayName} height={250}/>
+                                        )}
+                                    </div>
+                                ))}
+                            </Carousel>
                         </div>
                     </Modal>
                 )}

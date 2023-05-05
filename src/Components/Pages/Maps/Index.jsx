@@ -22,8 +22,6 @@ function Maps() {
             })
     }, []);
 
-    console.log('maps:', maps);
-
     return (
         <main>
             <HeadSection title="Les maps" para="Évoluez sur un terrain différent à chaque fois demande une connaissance de celui-ci." btn="Parcourir" anchor="#maps-details" />

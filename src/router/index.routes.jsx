@@ -5,6 +5,7 @@ import Agents from "../Components/Pages/Agents/Index";
 import Maps from "../Components/Pages/Maps/Index";
 import SelectedMap from "../Components/Pages/SelectedMap/Index";
 import Weapons from "../Components/Pages/Weapons/Index";
+import Modes from "../Components/Pages/Modes/Index";
 
 function Router() {
     return (
@@ -15,6 +16,7 @@ function Router() {
             <Route path="/maps" element={<Maps />} />
             <Route path="/maps/:map" element={<SelectedMap />} />
             <Route path="/weapons" element={<Weapons />} />
+            <Route path="/modes" element={<Modes />} />
         </Routes>
     );
 }

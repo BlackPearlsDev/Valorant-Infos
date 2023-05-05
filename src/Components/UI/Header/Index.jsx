@@ -28,7 +28,7 @@ function Header() {
                     <Link to="agents" className='nav-link nav-link-ltr'>Agents</Link>
                     <Link to="maps" className='nav-link nav-link-ltr'>Maps</Link>
                     <Link to="weapons" className='nav-link nav-link-ltr'>Armes</Link>
-                    <Link to="" className='nav-link nav-link-ltr'>Modes</Link>
+                    <Link to="modes" className='nav-link nav-link-ltr'>Modes</Link>
                 </nav>
             </div>
         </header>
